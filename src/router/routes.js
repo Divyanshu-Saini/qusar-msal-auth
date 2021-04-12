@@ -7,7 +7,10 @@ const routes = [
       { path: '', component: () => import('pages/Index.vue') }
     ]
   },
-
+  {
+    path:'/code',
+    redirect:'/'
+  },
   // Always leave this as last one,
   // but you can also remove it
   {

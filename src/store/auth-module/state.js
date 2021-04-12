@@ -9,17 +9,19 @@ export default function() {
         scopes: ["openid", "profile", "User.Read"]
       },
       cache: {
-        cacheLocation: "localStorage"
+        cacheLocation: "localStorage",
+        // storeAuthStateInCookie:true,
       },
       graph: {
         url: "https://graph.microsoft.com/v1.0/me",
         scopes: "User.Read",
         response_type: "blob"
-      }
+      },
+      mode: "redirect"
     },
     accessToken: "",
     idToken: "",
     logonResponse: {},
-    profile:{}
+    profile: {}
   };
 }
